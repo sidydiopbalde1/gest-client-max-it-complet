@@ -39,10 +39,10 @@ public class TransactionService {
     }
 
     // 3. Solde d’un compte principal
-    public BigDecimal getSoldePrincipal(long compteId) {
-        Compte compte = getCompteOrThrow(compteId);
-        return compte.getSolde();
-    }
+//    public BigDecimal getSoldePrincipal(long compteId) {
+//        Compte compte = getCompteOrThrow(compteId);
+//        return compte.getSolde();
+//    }
 
     // 4. Création d’un sous-compte
     public Compte creerSousCompte(Compte sousCompte) {
