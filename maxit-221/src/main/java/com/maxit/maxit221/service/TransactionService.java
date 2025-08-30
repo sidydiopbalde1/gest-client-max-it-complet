@@ -45,10 +45,10 @@ public class TransactionService {
 //    }
 
     // 4. Création d’un sous-compte
-    public Compte creerSousCompte(Compte sousCompte) {
-        sousCompte.setTypeCompte(TypeCompte.SOUS_COMPTE);
-        return compteRepository.save(sousCompte);
-    }
+//    public Compte creerSousCompte(Compte sousCompte) {
+//        sousCompte.setTypeCompte(TypeCompte.SOUS_COMPTE);
+//        return compteRepository.save(sousCompte);
+//    }
 
     public List<Transaction> findAll(){
         return transactionRepository.findAll();
