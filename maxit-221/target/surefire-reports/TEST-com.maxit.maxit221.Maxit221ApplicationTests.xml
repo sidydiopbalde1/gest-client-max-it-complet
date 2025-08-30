@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.maxit.maxit221.Maxit221ApplicationTests" time="4.863" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/var/www/html/maxit-221-complete/maxit-221/target/test-classes:/var/www/html/maxit-221-complete/maxit-221/target/classes:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.0/spring-boot-starter-web-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.0/spring-boot-starter-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.0/spring-boot-autoconfigure-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.0/spring-boot-starter-logging-3.2.0.jar:/home/sidydiopbalde/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/home/sidydiopbalde/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:/home/sidydiopbalde/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/home/sidydiopbalde/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/home/sidydiopbalde/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/home/sidydiopbalde/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/sidydiopbalde/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.0/spring-boot-starter-json-3.2.0.jar:/home/sidydiopbalde/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar:/home/sidydiopbalde/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar:/home/sidydiopbalde/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.0/spring-boot-starter-tomcat-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16.jar:/home/sidydiopbalde/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.16/tomcat-embed-websocket-10.1.16.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-web/6.1.1/spring-web-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-beans/6.1.1/spring-beans-6.1.1.jar:/home/sidydiopbalde/.m2/repository/io/micrometer/micrometer-observation/1.12.0/micrometer-observation-1.12.0.jar:/home/sidydiopbalde/.m2/repository/io/micrometer/micrometer-commons/1.12.0/micrometer-commons-1.12.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-webmvc/6.1.1/spring-webmvc-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-aop/6.1.1/spring-aop-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-context/6.1.1/spring-context-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-expression/6.1.1/spring-expression-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.0/spring-boot-starter-data-jpa-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.0/spring-boot-starter-aop-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/aspectj/aspectjweaver/1.9.20.1/aspectjweaver-1.9.20.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.0/spring-boot-starter-jdbc-3.2.0.jar:/home/sidydiopbalde/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-jdbc/6.1.1/spring-jdbc-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/hibernate/orm/hibernate-core/6.3.1.Final/hibernate-core-6.3.1.Final.jar:/home/sidydiopbalde/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/home/sidydiopbalde/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/home/sidydiopbalde/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/home/sidydiopbalde/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/home/sidydiopbalde/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/home/sidydiopbalde/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/home/sidydiopbalde/.m2/repository/net/bytebuddy/byte-buddy/1.14.10/byte-buddy-1.14.10.jar:/home/sidydiopbalde/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.4/jaxb-runtime-4.0.4.jar:/home/sidydiopbalde/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.4/jaxb-core-4.0.4.jar:/home/sidydiopbalde/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/home/sidydiopbalde/.m2/repository/org/glassfish/jaxb/txw2/4.0.4/txw2-4.0.4.jar:/home/sidydiopbalde/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/sidydiopbalde/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/sidydiopbalde/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/data/spring-data-jpa/3.2.0/spring-data-jpa-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/data/spring-data-commons/3.2.0/spring-data-commons-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-orm/6.1.1/spring-orm-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-tx/6.1.1/spring-tx-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-aspects/6.1.1/spring-aspects-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.0/spring-boot-starter-validation-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.16/tomcat-embed-el-10.1.16.jar:/home/sidydiopbalde/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/home/sidydiopbalde/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/home/sidydiopbalde/.m2/repository/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar:/home/sidydiopbalde/.m2/repository/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar:/home/sidydiopbalde/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.3.0/springdoc-openapi-starter-webmvc-ui-2.3.0.jar:/home/sidydiopbalde/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.3.0/springdoc-openapi-starter-webmvc-api-2.3.0.jar:/home/sidydiopbalde/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.3.0/springdoc-openapi-starter-common-2.3.0.jar:/home/sidydiopbalde/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.19/swagger-core-jakarta-2.2.19.jar:/home/sidydiopbalde/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.19/swagger-annotations-jakarta-2.2.19.jar:/home/sidydiopbalde/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.19/swagger-models-jakarta-2.2.19.jar:/home/sidydiopbalde/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.3/jackson-dataformat-yaml-2.15.3.jar:/home/sidydiopbalde/.m2/repository/org/webjars/swagger-ui/5.10.3/swagger-ui-5.10.3.jar:/home/sidydiopbalde/.m2/repository/io/jsonwebtoken/jjwt-api/0.11.5/jjwt-api-0.11.5.jar:/home/sidydiopbalde/.m2/repository/io/jsonwebtoken/jjwt-impl/0.11.5/jjwt-impl-0.11.5.jar:/home/sidydiopbalde/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.11.5/jjwt-jackson-0.11.5.jar:/home/sidydiopbalde/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/home/sidydiopbalde/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/home/sidydiopbalde/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/home/sidydiopbalde/.m2/repository/com/cloudinary/cloudinary-http44/1.34.0/cloudinary-http44-1.34.0.jar:/home/sidydiopbalde/.m2/repository/com/cloudinary/cloudinary-core/1.34.0/cloudinary-core-1.34.0.jar:/home/sidydiopbalde/.m2/repository/org/apache/httpcomponents/httpclient/4.4/httpclient-4.4.jar:/home/sidydiopbalde/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/home/sidydiopbalde/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/sidydiopbalde/.m2/repository/commons-codec/commons-codec/1.16.0/commons-codec-1.16.0.jar:/home/sidydiopbalde/.m2/repository/org/apache/httpcomponents/httpmime/4.4/httpmime-4.4.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-webflux/3.2.0/spring-boot-starter-webflux-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-reactor-netty/3.2.0/spring-boot-starter-reactor-netty-3.2.0.jar:/home/sidydiopbalde/.m2/repository/io/projectreactor/netty/reactor-netty-http/1.1.13/reactor-netty-http-1.1.13.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-codec-http/4.1.101.Final/netty-codec-http-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-common/4.1.101.Final/netty-common-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-buffer/4.1.101.Final/netty-buffer-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-transport/4.1.101.Final/netty-transport-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-codec/4.1.101.Final/netty-codec-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-handler/4.1.101.Final/netty-handler-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-codec-http2/4.1.101.Final/netty-codec-http2-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-resolver-dns/4.1.101.Final/netty-resolver-dns-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-resolver/4.1.101.Final/netty-resolver-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-codec-dns/4.1.101.Final/netty-codec-dns-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-resolver-dns-native-macos/4.1.101.Final/netty-resolver-dns-native-macos-4.1.101.Final-osx-x86_64.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-resolver-dns-classes-macos/4.1.101.Final/netty-resolver-dns-classes-macos-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-transport-native-epoll/4.1.101.Final/netty-transport-native-epoll-4.1.101.Final-linux-x86_64.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.101.Final/netty-transport-native-unix-common-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.101.Final/netty-transport-classes-epoll-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/projectreactor/netty/reactor-netty-core/1.1.13/reactor-netty-core-1.1.13.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-handler-proxy/4.1.101.Final/netty-handler-proxy-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-codec-socks/4.1.101.Final/netty-codec-socks-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-webflux/6.1.1/spring-webflux-6.1.1.jar:/home/sidydiopbalde/.m2/repository/io/projectreactor/reactor-core/3.6.0/reactor-core-3.6.0.jar:/home/sidydiopbalde/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/home/sidydiopbalde/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.0/spring-boot-starter-test-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-test/3.2.0/spring-boot-test-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.0/spring-boot-test-autoconfigure-3.2.0.jar:/home/sidydiopbalde/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/home/sidydiopbalde/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/home/sidydiopbalde/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/home/sidydiopbalde/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/home/sidydiopbalde/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/home/sidydiopbalde/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/home/sidydiopbalde/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/home/sidydiopbalde/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/home/sidydiopbalde/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/sidydiopbalde/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/home/sidydiopbalde/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/home/sidydiopbalde/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/sidydiopbalde/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/home/sidydiopbalde/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/sidydiopbalde/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/home/sidydiopbalde/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/home/sidydiopbalde/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/home/sidydiopbalde/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/home/sidydiopbalde/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar:/home/sidydiopbalde/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/sidydiopbalde/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/home/sidydiopbalde/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/home/sidydiopbalde/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-core/6.1.1/spring-core-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-jcl/6.1.1/spring-jcl-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-test/6.1.1/spring-test-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/home/sidydiopbalde/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/home/sidydiopbalde/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar:/home/sidydiopbalde/.m2/repository/org/springframework/cloud/spring-cloud-starter-openfeign/4.1.3/spring-cloud-starter-openfeign-4.1.3.jar:/home/sidydiopbalde/.m2/repository/org/springframework/cloud/spring-cloud-starter/4.1.4/spring-cloud-starter-4.1.4.jar:/home/sidydiopbalde/.m2/repository/org/springframework/cloud/spring-cloud-context/4.1.4/spring-cloud-context-4.1.4.jar:/home/sidydiopbalde/.m2/repository/org/springframework/security/spring-security-rsa/1.1.3/spring-security-rsa-1.1.3.jar:/home/sidydiopbalde/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.78/bcprov-jdk18on-1.78.jar:/home/sidydiopbalde/.m2/repository/org/springframework/cloud/spring-cloud-openfeign-core/4.1.3/spring-cloud-openfeign-core-4.1.3.jar:/home/sidydiopbalde/.m2/repository/io/github/openfeign/form/feign-form-spring/3.8.0/feign-form-spring-3.8.0.jar:/home/sidydiopbalde/.m2/repository/io/github/openfeign/form/feign-form/3.8.0/feign-form-3.8.0.jar:/home/sidydiopbalde/.m2/repository/commons-fileupload/commons-fileupload/1.5/commons-fileupload-1.5.jar:/home/sidydiopbalde/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/cloud/spring-cloud-commons/4.1.4/spring-cloud-commons-4.1.4.jar:/home/sidydiopbalde/.m2/repository/org/springframework/security/spring-security-crypto/6.2.0/spring-security-crypto-6.2.0.jar:/home/sidydiopbalde/.m2/repository/io/github/openfeign/feign-core/13.3/feign-core-13.3.jar:/home/sidydiopbalde/.m2/repository/io/github/openfeign/feign-slf4j/13.3/feign-slf4j-13.3.jar:"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="user.timezone" value="Africa/Dakar"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/var/www/html/maxit-221-complete/maxit-221/target/surefire/surefirebooter-20250807083356419_3.jar /var/www/html/maxit-221-complete/maxit-221/target/surefire 2025-08-07T08-33-55_752-jvmRun1 surefire-20250807083356419_1tmp surefire_0-20250807083356419_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/var/www/html/maxit-221-complete/maxit-221/target/test-classes:/var/www/html/maxit-221-complete/maxit-221/target/classes:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.0/spring-boot-starter-web-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.0/spring-boot-starter-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.0/spring-boot-autoconfigure-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.0/spring-boot-starter-logging-3.2.0.jar:/home/sidydiopbalde/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/home/sidydiopbalde/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:/home/sidydiopbalde/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/home/sidydiopbalde/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/home/sidydiopbalde/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/home/sidydiopbalde/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/sidydiopbalde/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.0/spring-boot-starter-json-3.2.0.jar:/home/sidydiopbalde/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar:/home/sidydiopbalde/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar:/home/sidydiopbalde/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.0/spring-boot-starter-tomcat-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16.jar:/home/sidydiopbalde/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.16/tomcat-embed-websocket-10.1.16.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-web/6.1.1/spring-web-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-beans/6.1.1/spring-beans-6.1.1.jar:/home/sidydiopbalde/.m2/repository/io/micrometer/micrometer-observation/1.12.0/micrometer-observation-1.12.0.jar:/home/sidydiopbalde/.m2/repository/io/micrometer/micrometer-commons/1.12.0/micrometer-commons-1.12.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-webmvc/6.1.1/spring-webmvc-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-aop/6.1.1/spring-aop-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-context/6.1.1/spring-context-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-expression/6.1.1/spring-expression-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.0/spring-boot-starter-data-jpa-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.0/spring-boot-starter-aop-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/aspectj/aspectjweaver/1.9.20.1/aspectjweaver-1.9.20.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.0/spring-boot-starter-jdbc-3.2.0.jar:/home/sidydiopbalde/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-jdbc/6.1.1/spring-jdbc-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/hibernate/orm/hibernate-core/6.3.1.Final/hibernate-core-6.3.1.Final.jar:/home/sidydiopbalde/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/home/sidydiopbalde/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/home/sidydiopbalde/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/home/sidydiopbalde/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/home/sidydiopbalde/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/home/sidydiopbalde/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/home/sidydiopbalde/.m2/repository/net/bytebuddy/byte-buddy/1.14.10/byte-buddy-1.14.10.jar:/home/sidydiopbalde/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.4/jaxb-runtime-4.0.4.jar:/home/sidydiopbalde/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.4/jaxb-core-4.0.4.jar:/home/sidydiopbalde/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/home/sidydiopbalde/.m2/repository/org/glassfish/jaxb/txw2/4.0.4/txw2-4.0.4.jar:/home/sidydiopbalde/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/sidydiopbalde/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/sidydiopbalde/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/data/spring-data-jpa/3.2.0/spring-data-jpa-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/data/spring-data-commons/3.2.0/spring-data-commons-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-orm/6.1.1/spring-orm-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-tx/6.1.1/spring-tx-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-aspects/6.1.1/spring-aspects-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.0/spring-boot-starter-validation-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.16/tomcat-embed-el-10.1.16.jar:/home/sidydiopbalde/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/home/sidydiopbalde/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/home/sidydiopbalde/.m2/repository/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar:/home/sidydiopbalde/.m2/repository/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar:/home/sidydiopbalde/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.3.0/springdoc-openapi-starter-webmvc-ui-2.3.0.jar:/home/sidydiopbalde/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.3.0/springdoc-openapi-starter-webmvc-api-2.3.0.jar:/home/sidydiopbalde/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.3.0/springdoc-openapi-starter-common-2.3.0.jar:/home/sidydiopbalde/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.19/swagger-core-jakarta-2.2.19.jar:/home/sidydiopbalde/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.19/swagger-annotations-jakarta-2.2.19.jar:/home/sidydiopbalde/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.19/swagger-models-jakarta-2.2.19.jar:/home/sidydiopbalde/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.3/jackson-dataformat-yaml-2.15.3.jar:/home/sidydiopbalde/.m2/repository/org/webjars/swagger-ui/5.10.3/swagger-ui-5.10.3.jar:/home/sidydiopbalde/.m2/repository/io/jsonwebtoken/jjwt-api/0.11.5/jjwt-api-0.11.5.jar:/home/sidydiopbalde/.m2/repository/io/jsonwebtoken/jjwt-impl/0.11.5/jjwt-impl-0.11.5.jar:/home/sidydiopbalde/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.11.5/jjwt-jackson-0.11.5.jar:/home/sidydiopbalde/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/home/sidydiopbalde/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/home/sidydiopbalde/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/home/sidydiopbalde/.m2/repository/com/cloudinary/cloudinary-http44/1.34.0/cloudinary-http44-1.34.0.jar:/home/sidydiopbalde/.m2/repository/com/cloudinary/cloudinary-core/1.34.0/cloudinary-core-1.34.0.jar:/home/sidydiopbalde/.m2/repository/org/apache/httpcomponents/httpclient/4.4/httpclient-4.4.jar:/home/sidydiopbalde/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/home/sidydiopbalde/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/sidydiopbalde/.m2/repository/commons-codec/commons-codec/1.16.0/commons-codec-1.16.0.jar:/home/sidydiopbalde/.m2/repository/org/apache/httpcomponents/httpmime/4.4/httpmime-4.4.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-webflux/3.2.0/spring-boot-starter-webflux-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-reactor-netty/3.2.0/spring-boot-starter-reactor-netty-3.2.0.jar:/home/sidydiopbalde/.m2/repository/io/projectreactor/netty/reactor-netty-http/1.1.13/reactor-netty-http-1.1.13.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-codec-http/4.1.101.Final/netty-codec-http-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-common/4.1.101.Final/netty-common-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-buffer/4.1.101.Final/netty-buffer-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-transport/4.1.101.Final/netty-transport-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-codec/4.1.101.Final/netty-codec-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-handler/4.1.101.Final/netty-handler-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-codec-http2/4.1.101.Final/netty-codec-http2-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-resolver-dns/4.1.101.Final/netty-resolver-dns-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-resolver/4.1.101.Final/netty-resolver-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-codec-dns/4.1.101.Final/netty-codec-dns-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-resolver-dns-native-macos/4.1.101.Final/netty-resolver-dns-native-macos-4.1.101.Final-osx-x86_64.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-resolver-dns-classes-macos/4.1.101.Final/netty-resolver-dns-classes-macos-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-transport-native-epoll/4.1.101.Final/netty-transport-native-epoll-4.1.101.Final-linux-x86_64.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.101.Final/netty-transport-native-unix-common-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.101.Final/netty-transport-classes-epoll-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/projectreactor/netty/reactor-netty-core/1.1.13/reactor-netty-core-1.1.13.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-handler-proxy/4.1.101.Final/netty-handler-proxy-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/io/netty/netty-codec-socks/4.1.101.Final/netty-codec-socks-4.1.101.Final.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-webflux/6.1.1/spring-webflux-6.1.1.jar:/home/sidydiopbalde/.m2/repository/io/projectreactor/reactor-core/3.6.0/reactor-core-3.6.0.jar:/home/sidydiopbalde/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/home/sidydiopbalde/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.0/spring-boot-starter-test-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-test/3.2.0/spring-boot-test-3.2.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.0/spring-boot-test-autoconfigure-3.2.0.jar:/home/sidydiopbalde/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/home/sidydiopbalde/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/home/sidydiopbalde/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/home/sidydiopbalde/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/home/sidydiopbalde/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/home/sidydiopbalde/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/home/sidydiopbalde/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/home/sidydiopbalde/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/home/sidydiopbalde/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/sidydiopbalde/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/home/sidydiopbalde/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/home/sidydiopbalde/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/sidydiopbalde/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/home/sidydiopbalde/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/sidydiopbalde/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/home/sidydiopbalde/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/home/sidydiopbalde/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/home/sidydiopbalde/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/home/sidydiopbalde/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar:/home/sidydiopbalde/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/sidydiopbalde/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/home/sidydiopbalde/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/home/sidydiopbalde/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-core/6.1.1/spring-core-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-jcl/6.1.1/spring-jcl-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/springframework/spring-test/6.1.1/spring-test-6.1.1.jar:/home/sidydiopbalde/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/home/sidydiopbalde/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/home/sidydiopbalde/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar:/home/sidydiopbalde/.m2/repository/org/springframework/cloud/spring-cloud-starter-openfeign/4.1.3/spring-cloud-starter-openfeign-4.1.3.jar:/home/sidydiopbalde/.m2/repository/org/springframework/cloud/spring-cloud-starter/4.1.4/spring-cloud-starter-4.1.4.jar:/home/sidydiopbalde/.m2/repository/org/springframework/cloud/spring-cloud-context/4.1.4/spring-cloud-context-4.1.4.jar:/home/sidydiopbalde/.m2/repository/org/springframework/security/spring-security-rsa/1.1.3/spring-security-rsa-1.1.3.jar:/home/sidydiopbalde/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.78/bcprov-jdk18on-1.78.jar:/home/sidydiopbalde/.m2/repository/org/springframework/cloud/spring-cloud-openfeign-core/4.1.3/spring-cloud-openfeign-core-4.1.3.jar:/home/sidydiopbalde/.m2/repository/io/github/openfeign/form/feign-form-spring/3.8.0/feign-form-spring-3.8.0.jar:/home/sidydiopbalde/.m2/repository/io/github/openfeign/form/feign-form/3.8.0/feign-form-3.8.0.jar:/home/sidydiopbalde/.m2/repository/commons-fileupload/commons-fileupload/1.5/commons-fileupload-1.5.jar:/home/sidydiopbalde/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/home/sidydiopbalde/.m2/repository/org/springframework/cloud/spring-cloud-commons/4.1.4/spring-cloud-commons-4.1.4.jar:/home/sidydiopbalde/.m2/repository/org/springframework/security/spring-security-crypto/6.2.0/spring-security-crypto-6.2.0.jar:/home/sidydiopbalde/.m2/repository/io/github/openfeign/feign-core/13.3/feign-core-13.3.jar:/home/sidydiopbalde/.m2/repository/io/github/openfeign/feign-slf4j/13.3/feign-slf4j-13.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/sidydiopbalde"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-04-15"/>
+    <property name="java.home" value="/usr/lib/jvm/java-17-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/var/www/html/maxit-221-complete/maxit-221"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="/var/www/html/maxit-221-complete/maxit-221/target/surefire/surefirebooter-20250807083356419_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.15+6-Ubuntu-0ubuntu122.04"/>
+    <property name="user.name" value="sidydiopbalde"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.8.0-65-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/sidydiopbalde/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-17"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="idea.version" value="2025.1.4.1"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
+    <property name="java.version" value="17.0.15"/>
+    <property name="user.dir" value="/var/www/html/maxit-221-complete/maxit-221"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="47403"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="java.vm.version" value="17.0.15+6-Ubuntu-0ubuntu122.04"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="contextLoads" classname="com.maxit.maxit221.Maxit221ApplicationTests" time="0.409">
+    <system-out><![CDATA[Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+08:33:57.011 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.maxit.maxit221.Maxit221ApplicationTests]: Maxit221ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+08:33:57.130 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.maxit.maxit221.Maxit221Application for test class com.maxit.maxit221.Maxit221ApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2025-08-07T08:33:57.429Z  INFO 47403 --- [           main] c.m.maxit221.Maxit221ApplicationTests    : Starting Maxit221ApplicationTests using Java 17.0.15 with PID 47403 (started by sidydiopbalde in /var/www/html/maxit-221-complete/maxit-221)
+2025-08-07T08:33:57.430Z DEBUG 47403 --- [           main] c.m.maxit221.Maxit221ApplicationTests    : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-08-07T08:33:57.430Z  INFO 47403 --- [           main] c.m.maxit221.Maxit221ApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-08-07T08:33:57.450Z DEBUG 47403 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4a325eb9
+2025-08-07T08:33:58.088Z  INFO 47403 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-07T08:33:58.218Z  INFO 47403 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 4 JPA repository interfaces.
+2025-08-07T08:33:58.429Z  INFO 47403 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ca821434-8010-32db-83e7-9b8060fe61a2
+2025-08-07T08:33:58.676Z  INFO 47403 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-07T08:33:58.738Z  INFO 47403 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-08-07T08:33:58.775Z  INFO 47403 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-07T08:33:58.979Z  INFO 47403 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-07T08:33:59.006Z  INFO 47403 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-07T08:33:59.172Z  INFO 47403 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SIDIDIOP
+2025-08-07T08:33:59.173Z  INFO 47403 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-07T08:33:59.184Z  WARN 47403 --- [           main] org.hibernate.dialect.Dialect            : HHH000511: The 2.2.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 11.0.0. Check the community dialects project for available legacy versions.
+2025-08-07T08:33:59.186Z  WARN 47403 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-07T08:33:59.732Z  INFO 47403 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    alter table if exists compte 
+       drop constraint if exists FK5qv5tcfmwu2mli0brm27y13gl
+Hibernate: 
+    alter table if exists compte 
+       drop constraint if exists FKm0wyihrfc5hunsrhtyq3j29wh
+Hibernate: 
+    alter table if exists demande_annulation 
+       drop constraint if exists FKn022bbhrlb2lwoqd0j6plto5j
+Hibernate: 
+    alter table if exists demande_annulation 
+       drop constraint if exists FKn2yoycep8f948bdvi9foeqaok
+Hibernate: 
+    alter table if exists demande_annulation 
+       drop constraint if exists FKhlu3fca3qg7mq2genhapgs1pp
+Hibernate: 
+    alter table if exists transaction 
+       drop constraint if exists FK73s7qa9u0pudjkp3fiawobsnw
+Hibernate: 
+    alter table if exists transaction 
+       drop constraint if exists FKiepcip15pje3m0dkrx1gvwk6y
+Hibernate: 
+    drop table if exists client cascade
+Hibernate: 
+    drop table if exists compte cascade
+Hibernate: 
+    drop table if exists demande_annulation cascade
+Hibernate: 
+    drop table if exists transaction cascade
+Hibernate: 
+    create table client (
+        is_active boolean,
+        is_verified boolean,
+        code_expiration timestamp(6),
+        created_at timestamp(6),
+        id bigserial not null,
+        updated_at timestamp(6),
+        adresse varchar(255) not null,
+        code_authentification varchar(255),
+        nci varchar(255) not null unique,
+        nom varchar(255) not null,
+        photo_url varchar(255),
+        piece_identite_url varchar(255),
+        prenom varchar(255) not null,
+        telephone varchar(255) not null unique,
+        primary key (id)
+    )
+Hibernate: 
+    create table compte (
+        is_active boolean,
+        is_blocked boolean,
+        solde numeric(15,2) not null,
+        blocked_until timestamp(6),
+        client_id bigint not null,
+        compte_principal_id bigint,
+        created_at timestamp(6),
+        id bigserial not null,
+        updated_at timestamp(6),
+        blocked_reason varchar(255),
+        numero_compte varchar(255) not null unique,
+        type_compte varchar(255) not null check (type_compte in ('PRINCIPAL','SOUS_COMPTE')),
+        primary key (id)
+    )
+Hibernate: 
+    create table demande_annulation (
+        created_at timestamp(6),
+        date_traitement timestamp(6),
+        demandeur_id bigint not null,
+        id bigserial not null,
+        traite_par_id bigint,
+        transaction_id bigint not null unique,
+        updated_at timestamp(6),
+        motif_demande varchar(255),
+        motif_rejet varchar(255),
+        reference varchar(255) not null unique,
+        statut varchar(255) not null check (statut in ('EN_ATTENTE','APPROUVEE','REJETEE','TRAITEE')),
+        primary key (id)
+    )
+Hibernate: 
+    create table transaction (
+        frais numeric(15,2),
+        frais_pris_en_charge boolean,
+        is_recurrent boolean,
+        montant numeric(15,2) not null,
+        montant_total numeric(15,2),
+        compte_destination_id bigint,
+        compte_source_id bigint,
+        created_at timestamp(6),
+        date_execution timestamp(6),
+        date_planifiee timestamp(6),
+        id bigserial not null,
+        prochaine_execution timestamp(6),
+        updated_at timestamp(6),
+        code_woyofal varchar(255),
+        description varchar(255),
+        frequence_recurrence varchar(255),
+        motif varchar(255),
+        nom_beneficiaire varchar(255),
+        numero_externe varchar(255),
+        reference varchar(255) not null unique,
+        statut varchar(255) not null check (statut in ('EN_ATTENTE','VALIDEE','EXECUTEE','ECHOUEE','ANNULEE','PLANIFIEE','EN_COURS_ANNULATION')),
+        statut_woyofal varchar(255),
+        type_transaction varchar(255) not null check (type_transaction in ('DEPOT','RETRAIT','TRANSFERT_INTERNE','TRANSFERT_EXTERNE','PAIEMENT','ACHAT_WOYOFAL')),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists compte 
+       add constraint FK5qv5tcfmwu2mli0brm27y13gl 
+       foreign key (client_id) 
+       references client
+Hibernate: 
+    alter table if exists compte 
+       add constraint FKm0wyihrfc5hunsrhtyq3j29wh 
+       foreign key (compte_principal_id) 
+       references compte
+Hibernate: 
+    alter table if exists demande_annulation 
+       add constraint FKn022bbhrlb2lwoqd0j6plto5j 
+       foreign key (demandeur_id) 
+       references client
+Hibernate: 
+    alter table if exists demande_annulation 
+       add constraint FKn2yoycep8f948bdvi9foeqaok 
+       foreign key (traite_par_id) 
+       references client
+Hibernate: 
+    alter table if exists demande_annulation 
+       add constraint FKhlu3fca3qg7mq2genhapgs1pp 
+       foreign key (transaction_id) 
+       references transaction
+Hibernate: 
+    alter table if exists transaction 
+       add constraint FK73s7qa9u0pudjkp3fiawobsnw 
+       foreign key (compte_destination_id) 
+       references compte
+Hibernate: 
+    alter table if exists transaction 
+       add constraint FKiepcip15pje3m0dkrx1gvwk6y 
+       foreign key (compte_source_id) 
+       references compte
+2025-08-07T08:33:59.788Z  INFO 47403 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-07T08:33:59.979Z  INFO 47403 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-07T08:34:00.519Z  WARN 47403 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-07T08:34:00.974Z DEBUG 47403 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 13 mappings in 'requestMappingHandlerMapping'
+2025-08-07T08:34:01.019Z DEBUG 47403 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-08-07T08:34:01.045Z DEBUG 47403 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-08-07T08:34:01.070Z DEBUG 47403 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-08-07T08:34:01.300Z  INFO 47403 --- [           main] c.m.maxit221.Maxit221ApplicationTests    : Started Maxit221ApplicationTests in 4.066 seconds (process running for 4.851)
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,250 @@
+
+    @Autowired
+    private CompteService compteService;
+
+    @Autowired
+    private ClientService clientService;
+
+   // @GetMapping
+//    public ResponseEntity<List<CompteDto>> getAllComptes() {
+//        List<Compte> comptes = compteService.findAll();
+//        List<CompteDto> compteDtos = comptes.stream()
+//                .map(this::convertToDto)
+//                .collect(Collectors.toList());
+//        return ResponseEntity.ok(compteDtos);
+//    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<CompteDto> getCompteById(@PathVariable Long id) {
+        Compte compte = compteService.findById(id);
+//        if (compte.isPresent()) {
+//            return ResponseEntity.ok(convertToDto(compte.get()));
+//        }
+        return ResponseEntity.notFound().build();
+    }
+
+    @GetMapping("/numero/{numeroCompte}")
+    public ResponseEntity<CompteDto> getCompteByNumero(@PathVariable String numeroCompte) {
+        Compte compte = compteService.findByNumeroCompte(numeroCompte);
+//        if (compte.isPresent()) {
+//            return ResponseEntity.ok(convertToDto(compte.get()));
+//        }
+        return ResponseEntity.notFound().build();
+    }
+
+//    @GetMapping("/client/{clientId}")
+//    public ResponseEntity<List<CompteDto>> getComptesByClientId(@PathVariable Long clientId) {
+//        List<Compte> comptes = compteService.findByClientId(clientId);
+//        List<CompteDto> compteDtos = comptes.stream()
+//                .map(this::convertToDto)
+//                .collect(Collectors.toList());
+//        return ResponseEntity.ok(compteDtos);
+//    }
+
+    @GetMapping("/client/{clientId}/principal")
+    public ResponseEntity<CompteDto> getComptePrincipalByClientId(@PathVariable Long clientId) {
+        Compte compte = compteService.findComptePrincipalByClientId(clientId);
+//        if (compte.isPresent()) {
+//            return ResponseEntity.ok(compte.get());
+//        }
+        return ResponseEntity.notFound().build();
+    }
+
+//    @PostMapping("/principal")
+//    public ResponseEntity<?> creerComptePrincipal(@RequestBody Map<String, Long> request) {
+//        Long clientId = request.get("clientId");
+//        if (clientId == null) {
+//            Map<String, String> error = new HashMap<>();
+//            error.put("error", "ID du client requis");
+//            return ResponseEntity.badRequest().body(error);
+//        }
+//
+//        Client clientOpt = clientService.findById(clientId);
+////        if (clientOpt.isEmpty()) {
+////            Map<String, String> error = new HashMap<>();
+////            error.put("error", "Client non trouvé");
+////            return ResponseEntity.notFound().body(error);
+////        }
+//
+//
+//            Compte compte = compteService.creerComptePrincipal(clientOpt);
+//            return ResponseEntity.status(HttpStatus.CREATED).body(compte);
+//
+//    }
+
+    @PostMapping("/sous-compte")
+    public ResponseEntity<?> creerSousCompte(@RequestBody Map<String, Long> request) {
+        Long clientId = request.get("clientId");
+        Long comptePrincipalId = request.get("comptePrincipalId");
+
+        if (clientId == null || comptePrincipalId == null) {
+            Map<String, String> error = new HashMap<>();
+            error.put("error", "ID du client et du compte principal requis");
+            return ResponseEntity.badRequest().body(error);
+        }
+
+        Client clientOpt = clientService.findById(clientId);
+        Compte comptePrincipalOpt = compteService.findById(comptePrincipalId);
+
+//        if (clientOpt.isEmpty()) {
+//            Map<String, String> error = new HashMap<>();
+//            error.put("error", "Client non trouvé");
+//            return ResponseEntity.notFound().body(error);
+//        }
+//
+//        if (comptePrincipalOpt.isEmpty()) {
+//            Map<String, String> error = new HashMap<>();
+//            error.put("error", "Compte principal non trouvé");
+//            return ResponseEntity.notFound().body(error);
+//        }
+
+        try {
+            Compte sousCompte = compteService.creerSousCompte(comptePrincipalOpt.get());
+            return ResponseEntity.status(HttpStatus.CREATED).body(sousCompte);
+        } catch (RuntimeException e) {
+            Map<String, String> error = new HashMap<>();
+            error.put("error", e.getMessage());
+            return ResponseEntity.badRequest().body(error);
+        }
+    }
+
+    @PutMapping("/{id}/bloquer")
+    public ResponseEntity<?> bloquerCompte(@PathVariable Long id, @RequestBody Map<String, String> request) {
+        String raison = request.get("raison");
+        if (raison == null || raison.isEmpty()) {
+            raison = "Blocage demandé";
+        }
+
+        try {
+            compteService.bloquerCompte(id, raison);
+            Map<String, String> response = new HashMap<>();
+            response.put("message", "Compte bloqué avec succès");
+            return ResponseEntity.ok(response);
+        } catch (Exception e) {
+            Map<String, String> error = new HashMap<>();
+            error.put("error", "Erreur lors du blocage");
+            return ResponseEntity.internalServerError().body(error);
+        }
+    }
+
+    @PutMapping("/{id}/bloquer-periode")
+    public ResponseEntity<?> bloquerComptePourPeriode(@PathVariable Long id, @RequestBody Map<String, Object> request) {
+        String raisonStr = (String) request.get("raison");
+        String finBlocageStr = (String) request.get("finBlocage");
+
+        if (finBlocageStr == null) {
+            Map<String, String> error = new HashMap<>();
+            error.put("error", "Date de fin de blocage requise");
+            return ResponseEntity.badRequest().body(error);
+        }
+
+        try {
+            LocalDateTime finBlocage = LocalDateTime.parse(finBlocageStr);
+            String raison = raisonStr != null ? raisonStr : "Blocage temporaire";
+
+            compteService.bloquerComptePourPeriode(id, finBlocage, raison);
+            Map<String, String> response = new HashMap<>();
+            response.put("message", "Compte bloqué temporairement avec succès");
+            return ResponseEntity.ok(response);
+        } catch (Exception e) {
+            Map<String, String> error = new HashMap<>();
+            error.put("error", "Erreur lors du blocage temporaire");
+            return ResponseEntity.internalServerError().body(error);
+        }
+    }
+
+    @PutMapping("/{id}/debloquer")
+    public ResponseEntity<?> debloquerCompte(@PathVariable Long id) {
+        try {
+            compteService.debloquerCompte(id);
+            Map<String, String> response = new HashMap<>();
+            response.put("message", "Compte débloqué avec succès");
+            return ResponseEntity.ok(response);
+        } catch (Exception e) {
+            Map<String, String> error = new HashMap<>();
+            error.put("error", "Erreur lors du déblocage");
+            return ResponseEntity.internalServerError().body(error);
+        }
+    }
+
+    @PutMapping("/{id}/changer-en-principal")
+    public ResponseEntity<?> changerSousCompteEnPrincipal(@PathVariable Long id) {
+        try {
+            Compte compte = compteService.changerSousCompteEnPrincipal(id);
+            Map<String, Object> response = new HashMap<>();
+            response.put("message", "Sous-compte changé en compte principal avec succès");
+            response.put("compte", compte);
+            return ResponseEntity.ok(response);
+        } catch (RuntimeException e) {
+            Map<String, String> error = new HashMap<>();
+            error.put("error", e.getMessage());
+            return ResponseEntity.badRequest().body(error);
+        }
+    }
+
+    @PutMapping("/{id}/crediter")
+    public ResponseEntity<?> crediterCompte(@PathVariable Long id, @RequestBody Map<String, Object> request) {
+        try {
+            Object montantObj = request.get("montant");
+            BigDecimal montant;
+
+            if (montantObj instanceof Number) {
+                montant = BigDecimal.valueOf(((Number) montantObj).doubleValue());
+            } else if (montantObj instanceof String) {
+                montant = new BigDecimal((String) montantObj);
+            } else {
+                Map<String, String> error = new HashMap<>();
+                error.put("error", "Montant invalide");
+                return ResponseEntity.badRequest().body(error);
+            }
+
+            if (montant.compareTo(BigDecimal.ZERO) <= 0) {
+                Map<String, String> error = new HashMap<>();
+                error.put("error", "Le montant doit être positif");
+                return ResponseEntity.badRequest().body(error);
+            }
+
+            compteService.crediterCompte(id, montant);
+            Map<String, String> response = new HashMap<>();
+            response.put("message", "Compte crédité avec succès");
+            return ResponseEntity.ok(response);
+        } catch (Exception e) {
+            Map<String, String> error = new HashMap<>();
+            error.put("error", "Erreur lors du crédit");
+            return ResponseEntity.internalServerError().body(error);
+        }
+    }
+
+    @PutMapping("/{id}/debiter")
+    public ResponseEntity<?> debiterCompte(@PathVariable Long id, @RequestBody Map<String, Object> request) {
+        try {
+            Object montantObj = request.get("montant");
+            BigDecimal montant;
+
+            if (montantObj instanceof Number) {
+                montant = BigDecimal.valueOf(((Number) montantObj).doubleValue());
+            } else if (montantObj instanceof String) {
+                montant = new BigDecimal((String) montantObj);
+            } else {
+                Map<String, String> error = new HashMap<>();
+                error.put("error", "Montant invalide");
+                return ResponseEntity.badRequest().body(error);
+            }
+
+            if (montant.compareTo(BigDecimal.ZERO) <= 0) {
+                Map<String, String> error = new HashMap<>();
+                error.put("error", "Le montant doit être positif");
+                return ResponseEntity.badRequest().body(error);
+            }
+
+            compteService.debiterCompte(id, montant);
+            Map<String, String> response = new HashMap<>();
+            response.put("message", "Compte débité avec succès");
+            return ResponseEntity.ok(response);
+        } catch (RuntimeException e) {
+            Map<String, String> error = new HashMap<>();
+            error.put("error", e.getMessage());
+            return ResponseEntity.badRequest().body(error);
+        }
+    }
+
