@@ -13,9 +13,11 @@ pipeline {
         }
 
         stage('Build with Maven') {
-            steps {
-                sh './mvnw clean package'
-            }
+           steps {
+                   dir('maxit-221') {
+                       sh './mvnw clean package'
+                   }
+               }
         }
 
         stage('Build & Push Docker Image') {
