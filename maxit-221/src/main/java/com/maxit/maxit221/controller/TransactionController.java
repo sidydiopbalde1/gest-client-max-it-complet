@@ -49,10 +49,10 @@ public class TransactionController {
     public List<TransactionDtoResponse> getTransactionsByType(long compteId, TypeTransaction type) {
         return transactionHelper.getTransactionsByType(compteId,type);
     }
-    @PostMapping
-    public TransactionDtoResponse save(@RequestBody @Valid TransactionDtoRequest transactionDtoRequest){
-        return transactionHelper.save(transactionDtoRequest);
-    }
+//    @PostMapping
+//    public TransactionDtoResponse save(@RequestBody @Valid TransactionDtoRequest transactionDtoRequest){
+//        return transactionHelper.save(transactionDtoRequest);
+//    }
 
 
 
