@@ -1,12 +1,12 @@
 # Build stage
 FROM maven:3.9.6-eclipse-temurin-17 AS build
 WORKDIR /app
-COPY pom.xml .
+COPY maxit-221/pom.xml .
 
 # Télécharger les dépendances
 RUN mvn dependency:go-offline -B
 
-COPY src src
+COPY maxit-221/src src
 
 # Build avec gestion d'erreur (pour le CI/CD temporaire)
 RUN mvn clean compile -DskipTests -Dmaven.compiler.failOnError=false || \
