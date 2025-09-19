@@ -45,10 +45,10 @@ public class TransactionController {
 //    public List<TransactionDtoResponse> getLast10Transactions(long compteId) {
 //        return transactionHelper.getLast10Transactions(compteId);
 //    }
-    @GetMapping("/type/{compteId}/{type}")
-    public List<TransactionDtoResponse> getTransactionsByType(long compteId, TypeTransaction type) {
-        return transactionHelper.getTransactionsByType(compteId,type);
-    }
+//    @GetMapping("/type/{compteId}/{type}")
+//    public List<TransactionDtoResponse> getTransactionsByType(long compteId, TypeTransaction type) {
+//        return transactionHelper.getTransactionsByType(compteId,type);
+//    }
 //    @PostMapping
 //    public TransactionDtoResponse save(@RequestBody @Valid TransactionDtoRequest transactionDtoRequest){
 //        return transactionHelper.save(transactionDtoRequest);

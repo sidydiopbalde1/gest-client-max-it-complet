@@ -34,9 +34,9 @@ public class TransactionService {
 //    }
 
     // 2. Historique filtré par type
-    public List<Transaction> getTransactionsByType(long compteId, TypeTransaction type) {
-        return transactionRepository.findByCompteIdAndTypeTransactionOrderByDateTransactionDesc(compteId, type);
-    }
+//    public List<Transaction> getTransactionsByType(long compteId, TypeTransaction type) {
+//        return transactionRepository.findByCompteIdAndTypeTransactionOrderByDateTransactionDesc(compteId, type);
+//    }
 
     // 3. Solde d’un compte principal
 //    public BigDecimal getSoldePrincipal(long compteId) {

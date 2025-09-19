@@ -67,9 +67,9 @@ public interface TransactionRepository extends JpaRepository<Transaction, Long> 
 //    long countTransactionsByCompteIdSince(@Param("compteId") Long compteId,
 //                                          @Param("dateDebut") LocalDateTime dateDebut);
 
-    @Query("SELECT t FROM Transaction t "+
-    "WHERE t.typeTransaction = :type" + " AND t.compteSource = :compteId" + "ORDER BY t.createdAt DESC")
-    List<Transaction> findByCompteIdAndTypeTransactionOrderByDateTransactionDesc(long compteId, TypeTransaction type);
+//    @Query("SELECT t FROM Transaction t "+
+//    "WHERE t.typeTransaction = :type" + " AND t.compteSource = :compteId" + "ORDER BY t.createdAt DESC")
+//    List<Transaction> findByCompteIdAndTypeTransactionOrderByDateTransactionDesc(long compteId, TypeTransaction type);
 }
 
 

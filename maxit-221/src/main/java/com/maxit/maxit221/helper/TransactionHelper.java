@@ -29,9 +29,9 @@ public class TransactionHelper {
 //        return transactionService.getLast10Transactions(compteId).stream().map(transactionMapper::TransactionEntityToTransactionResponse).toList();
 //    }
 
-    public List<TransactionDtoResponse> getTransactionsByType(long compteId, TypeTransaction type) {
-        return transactionService.getTransactionsByType(compteId,type).stream().map(transactionMapper::TransactionEntityToTransactionResponse).toList();
-    }
+//    public List<TransactionDtoResponse> getTransactionsByType(long compteId, TypeTransaction type) {
+//        return transactionService.getTransactionsByType(compteId,type).stream().map(transactionMapper::TransactionEntityToTransactionResponse).toList();
+//    }
 
 //    public TransactionDtoResponse save(TransactionDtoRequest transactionDtoRequest) {
 //        if(transactionDtoRequest.getFraisPrisEnCharge()){
