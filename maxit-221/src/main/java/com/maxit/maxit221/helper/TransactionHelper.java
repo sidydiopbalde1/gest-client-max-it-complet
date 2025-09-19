@@ -33,16 +33,16 @@ public class TransactionHelper {
         return transactionService.getTransactionsByType(compteId,type).stream().map(transactionMapper::TransactionEntityToTransactionResponse).toList();
     }
 
-    public TransactionDtoResponse save(TransactionDtoRequest transactionDtoRequest) {
-        if(transactionDtoRequest.getFraisPrisEnCharge()){
-
-        }
-                BigDecimal frais = source.getEstSousCompte() || destination.getEstSousCompte()
-                ? BigDecimal.ZERO
-                : montant.multiply(new BigDecimal("0.08"));
-
-        if (!fraisPrisEnCharge) {
-            montant = montant.subtract(frais);
-        }
-    }
+//    public TransactionDtoResponse save(TransactionDtoRequest transactionDtoRequest) {
+//        if(transactionDtoRequest.getFraisPrisEnCharge()){
+//
+//        }
+//                BigDecimal frais = source.getEstSousCompte() || destination.getEstSousCompte()
+//                ? BigDecimal.ZERO
+//                : montant.multiply(new BigDecimal("0.08"));
+//
+//        if (!fraisPrisEnCharge) {
+//            montant = montant.subtract(frais);
+//        }
+//    }
 }
