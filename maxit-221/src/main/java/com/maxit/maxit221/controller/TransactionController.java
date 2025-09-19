@@ -41,10 +41,10 @@ public class TransactionController {
     public List<TransactionDtoResponse> findAll(){
         return transactionHelper.findAll();
     }
-    @GetMapping("/last/10/{compteId}")
-    public List<TransactionDtoResponse> getLast10Transactions(long compteId) {
-        return transactionHelper.getLast10Transactions(compteId);
-    }
+//    @GetMapping("/last/10/{compteId}")
+//    public List<TransactionDtoResponse> getLast10Transactions(long compteId) {
+//        return transactionHelper.getLast10Transactions(compteId);
+//    }
     @GetMapping("/type/{compteId}/{type}")
     public List<TransactionDtoResponse> getTransactionsByType(long compteId, TypeTransaction type) {
         return transactionHelper.getTransactionsByType(compteId,type);

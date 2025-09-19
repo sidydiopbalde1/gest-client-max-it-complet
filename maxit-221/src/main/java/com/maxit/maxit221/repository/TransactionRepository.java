@@ -31,41 +31,41 @@ public interface TransactionRepository extends JpaRepository<Transaction, Long> 
                                             @Param("typeTransaction") TypeTransaction typeTransaction,
                                             Pageable pageable);
 
-    @Query("SELECT t FROM Transaction t " +
-            "WHERE (t.compteSource.id = :compteId OR t.compteDestination.id = :compteId) " +
-            "ORDER BY t.createdAt DESC")
-    List<Transaction> findTop10ByCompteIdOrderByCreatedAtDesc(@Param("compteId") long compteId, Pageable pageable);
+//    @Query("SELECT t FROM Transaction t " +
+//            "WHERE (t.compteSource.id = :compteId OR t.compteDestination.id = :compteId) " +
+//            "ORDER BY t.createdAt DESC")
+//    List<Transaction> findTop10ByCompteIdOrderByCreatedAtDesc(@Param("compteId") long compteId, Pageable pageable);
 
-    @Query("SELECT t FROM Transaction t " +
-            "WHERE t.compteSource.client.id = :clientId " +
-            "ORDER BY t.createdAt DESC")
-    List<Transaction> findByClientId(@Param("clientId") Long clientId, Pageable pageable);
-
-    @Query("SELECT t FROM Transaction t " +
-            "WHERE t.compteSource.client.id = :clientId " +
-            "AND t.typeTransaction = :typeTransaction " +
-            "ORDER BY t.createdAt DESC")
-    List<Transaction> findByClientIdAndType(@Param("clientId") Long clientId,
-                                            @Param("typeTransaction") TypeTransaction typeTransaction,
-                                            Pageable pageable);
-
-    @Query("SELECT t FROM Transaction t " +
-            "WHERE t.statut = :statut AND t.datePlanifiee <= :maintenant")
-    List<Transaction> findTransactionsPlanifieesAExecuter(@Param("statut") StatutTransaction statut,
-                                                          @Param("maintenant") LocalDateTime maintenant);
-
-    @Query("SELECT t FROM Transaction t " +
-            "WHERE t.isRecurrent = true AND t.prochaineExecution <= :maintenant")
-    List<Transaction> findTransactionsRecurrentesAExecuter(@Param("maintenant") LocalDateTime maintenant);
-
-    @Query("SELECT t FROM Transaction t " +
-            "WHERE t.typeTransaction = 'ACHAT_WOYOFAL' AND t.statutWoyofal = 'EN_ATTENTE'")
-    List<Transaction> findDemandesWoyofalEnAttente();
-
-    @Query("SELECT COUNT(t) FROM Transaction t " +
-            "WHERE t.compteSource.id = :compteId AND t.createdAt >= :dateDebut")
-    long countTransactionsByCompteIdSince(@Param("compteId") Long compteId,
-                                          @Param("dateDebut") LocalDateTime dateDebut);
+//    @Query("SELECT t FROM Transaction t " +
+//            "WHERE t.compteSource.client.id = :clientId " +
+//            "ORDER BY t.createdAt DESC")
+//    List<Transaction> findByClientId(@Param("clientId") Long clientId, Pageable pageable);
+//
+//    @Query("SELECT t FROM Transaction t " +
+//            "WHERE t.compteSource.client.id = :clientId " +
+//            "AND t.typeTransaction = :typeTransaction " +
+//            "ORDER BY t.createdAt DESC")
+//    List<Transaction> findByClientIdAndType(@Param("clientId") Long clientId,
+//                                            @Param("typeTransaction") TypeTransaction typeTransaction,
+//                                            Pageable pageable);
+//
+//    @Query("SELECT t FROM Transaction t " +
+//            "WHERE t.statut = :statut AND t.datePlanifiee <= :maintenant")
+//    List<Transaction> findTransactionsPlanifieesAExecuter(@Param("statut") StatutTransaction statut,
+//                                                          @Param("maintenant") LocalDateTime maintenant);
+//
+//    @Query("SELECT t FROM Transaction t " +
+//            "WHERE t.isRecurrent = true AND t.prochaineExecution <= :maintenant")
+//    List<Transaction> findTransactionsRecurrentesAExecuter(@Param("maintenant") LocalDateTime maintenant);
+//
+//    @Query("SELECT t FROM Transaction t " +
+//            "WHERE t.typeTransaction = 'ACHAT_WOYOFAL' AND t.statutWoyofal = 'EN_ATTENTE'")
+//    List<Transaction> findDemandesWoyofalEnAttente();
+//
+//    @Query("SELECT COUNT(t) FROM Transaction t " +
+//            "WHERE t.compteSource.id = :compteId AND t.createdAt >= :dateDebut")
+//    long countTransactionsByCompteIdSince(@Param("compteId") Long compteId,
+//                                          @Param("dateDebut") LocalDateTime dateDebut);
 
     @Query("SELECT t FROM Transaction t "+
     "WHERE t.typeTransaction = :type" + " AND t.compteSource = :compteId" + "ORDER BY t.createdAt DESC")

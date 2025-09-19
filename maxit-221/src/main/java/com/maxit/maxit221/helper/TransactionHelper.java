@@ -25,9 +25,9 @@ public class TransactionHelper {
         return transactionService.findAll().stream().map(transactionMapper::TransactionEntityToTransactionResponse).toList();
     }
 
-    public List<TransactionDtoResponse> getLast10Transactions(long compteId) {
-        return transactionService.getLast10Transactions(compteId).stream().map(transactionMapper::TransactionEntityToTransactionResponse).toList();
-    }
+//    public List<TransactionDtoResponse> getLast10Transactions(long compteId) {
+//        return transactionService.getLast10Transactions(compteId).stream().map(transactionMapper::TransactionEntityToTransactionResponse).toList();
+//    }
 
     public List<TransactionDtoResponse> getTransactionsByType(long compteId, TypeTransaction type) {
         return transactionService.getTransactionsByType(compteId,type).stream().map(transactionMapper::TransactionEntityToTransactionResponse).toList();

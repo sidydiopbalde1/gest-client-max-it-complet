@@ -27,11 +27,11 @@ public class TransactionService {
     @Autowired
     private CompteRepository compteRepository;
 
-    // 1. Liste des 10 dernières transactions (principal uniquement)
-    public List<Transaction> getLast10Transactions(long compteId) {
-        Pageable pageable = PageRequest.of(0, 10);
-        return transactionRepository.findTop10ByCompteIdOrderByCreatedAtDesc(compteId,pageable);
-    }
+//    // 1. Liste des 10 dernières transactions (principal uniquement)
+//    public List<Transaction> getLast10Transactions(long compteId) {
+//        Pageable pageable = PageRequest.of(0, 10);
+//        return transactionRepository.findTop10ByCompteIdOrderByCreatedAtDesc(compteId,pageable);
+//    }
 
     // 2. Historique filtré par type
     public List<Transaction> getTransactionsByType(long compteId, TypeTransaction type) {
